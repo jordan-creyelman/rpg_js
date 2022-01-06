@@ -19,5 +19,8 @@ export default class Berzerker extends Character {
     if(this.hp>0){
       return this.name
     }
+    else{
+      return "mort"
+    }
   }
 } 

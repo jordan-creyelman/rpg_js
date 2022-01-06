@@ -28,5 +28,11 @@ export default  class Assasin extends Character{
     if(this.hp>0){
       return this.name
     }
+    else if (this.immune==true){
+      return "immunisé"
+    }
+    else{
+      return "mort"
+    }
   }
 } 

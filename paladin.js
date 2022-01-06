@@ -32,5 +32,8 @@ export default class Paladin extends Character{
     if(this.hp>0){
       return this.name
     }
+    else{
+      return "mort"
+    }
   }
 } 

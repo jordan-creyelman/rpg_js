@@ -7,7 +7,8 @@ alert("le jeu commence GO !!!");
 
 while(turn.startTurn!=game.turnLeft){
    turn.tourJoueur(players,game.fighter,game.paladin,game.monk,game.berzerker,game.assasin);
-   turn.nextTurn()
+   turn.turnNew();
  }
+ game.win(game.players)
 
  

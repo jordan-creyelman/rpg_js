@@ -26,5 +26,8 @@ export default class Monk extends Character {
     if(this.hp>0){
       return this.name
     }
+    else{
+      return "mort"
+    }
   }
 } 

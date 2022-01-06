@@ -6,7 +6,7 @@ import Assasin from "./assasin.js";
 
 export default class Game{
    constructor(){
-     this.turnLeft=10;
+     this.turnLeft=3;
      this.fighter=new Fighter(name="grace");
      this.paladin=new Paladin(name="ulder");
      this.monk=new Monk(name="moana");
@@ -17,14 +17,20 @@ export default class Game{
    newTurn(){
      this.turnLeft-=1;
    }
-  // win(fighter,paladin,monk,berzerker,assasin){
-  //  var i =0;
-  //  var win ;
-  //  while (i<5){
-  //    if()
-  //    i+=1
-  //  }
-  // }
+  win(players){
+   var i =0;
+   var win= "victoire à "
+   while (i<players.length){
+     if(players[i].hp>0){
+       console.log()
+       win += " "+players[i].name
+       players.status=="win"
+     }
+     i+=1
+   }
+   alert(win)
+  }
+  
 }
 
 

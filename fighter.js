@@ -30,6 +30,9 @@ export default class Fighter extends Character{
     if(this.hp>0){
       return this.name
     }
+    else{
+      return "mort"
+    }
   }
 } 
 

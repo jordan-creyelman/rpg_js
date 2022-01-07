@@ -42,15 +42,21 @@ export default class Turn{
     }  
     return arrays;
   }    
-  tourJoueur(arrays,fighter,paladin,monk,berzerker,assasin){
+  tourJoueur(arrays,fighter,paladin,monk,berzerker,assasin,players){
     arrays=this.choicePosition(arrays)
     alert(arrays)
     var i=0
     var choix;
     var ennemis="";
-    while(i<arrays.length){
+    var gagnant=false 
+    while(i<arrays.length&&gagnant==false){
+
       // fighter
+      gagnant=this.loser(players)
      if(arrays[i]==fighter.name&&fighter.hp>0){
+      if(fighter.dimdeg==true){
+        fighter.dimdeg=false;
+      }
        alert("le nom du joueur est "+fighter.name+"votre point de vie "+fighter.hp+"votre points de mana"+fighter.mana)
        var darkvision = ("choisir 1 darkVision cout 20 mana ou choisir 2 pour dmg de 4");
        if(fighter.mana>19){
@@ -162,12 +168,13 @@ export default class Turn{
          alert("vous avez plus asser de manan,attaque corps à corps dégats de 4");
          choix=2;
        }
-       ennemis=prompt(assasin.joueur_life()+" "+paladin.joueur_life()+" "+fighter.joueur_life()+" "+berzerker.joueur_life()+"tapez le nom du joueur")
+      
        if(choix==1){
          
          monk.heal()
 
         }else{
+          ennemis=prompt(assasin.joueur_life()+" "+paladin.joueur_life()+" "+fighter.joueur_life()+" "+berzerker.joueur_life()+"tapez le nom du joueur")
           if(ennemis==assasin.name){
             assasin.takeDamage(monk.dealDamage());
             alert("il est reste"+assasin.hp+"points de vie à"+assasin.name);
@@ -277,6 +284,20 @@ export default class Turn{
   
    
   }
- 
+  loser(gamePlayer){
+    var i=0
+    var loser=0; 
+    while(i<gamePlayer.length){
+      if(gamePlayer[i].hp<1){
+        gamePlayer[i].status="loser";
+        loser+=1;
+      }
+     i+=1;
+    } 
+   
+    if(loser==gamePlayer.length-1){
+      return false
+   }
+  }
   
 }

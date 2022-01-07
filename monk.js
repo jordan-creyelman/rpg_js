@@ -10,9 +10,7 @@ export default class Monk extends Character {
       console.log("il vous reste "+this.mana+"points de mana");
       this.hp=8;
     }
-    else{
-      console.log("vous avez pas assez de mana");
-    }
+    
     
   }
   takeDamage(attack){

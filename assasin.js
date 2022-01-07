@@ -25,11 +25,13 @@ export default  class Assasin extends Character{
     return this.dmg
    }
    joueur_life(){
-    if(this.hp>0){
+    if(this.hp>0&&this.immune==false){
       return this.name
     }
     else if (this.immune==true){
-      return "immunisé"
+      alert("test")
+      return "immunisé";
+
     }
     else{
       return "mort"

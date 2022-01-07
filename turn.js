@@ -9,7 +9,7 @@ export default class Turn{
 
   }
   turnNew(){
-     this.startTurn+=1
+    this.startTurn+=1
   }
   choicePosition(joueur){
     var i =0;
@@ -26,8 +26,7 @@ export default class Turn{
       while (x<nombre.length&&nombreTrouver==false){
            if(aleatoire==nombre[x]) {
             nombreTrouver=true;
-            
-           } 
+            } 
            x+=1;        
       }
       if(nombreTrouver==false){
@@ -276,9 +275,6 @@ export default class Turn{
          }
        }
       }  
-      
-
-      
      i+=1;
     }
   

@@ -11,15 +11,15 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var i =0;
-var aleatoire;
-var joueurs= game.players;
-var arrays=[];
-while(i<joueurs.length){
-  aleatoire=getRandomInt(0,joueurs.length);
-  arrays+=joueurs[aleatoire].name;
-  joueurs.splice(aleatoire,1);
-} 
+// var i =0;
+// var aleatoire;
+// var joueurs= game.players;
+// var arrays=[];
+// while(i<joueurs.length){
+//   aleatoire=getRandomInt(0,joueurs.length);
+//   arrays+=joueurs[aleatoire].name;
+//   joueurs.splice(aleatoire,1);
+// } 
 alert(arrays);
 // while(turn.startTurn!=game.turnLeft){
 //    turn.tourJoueur(players,game.fighter,game.paladin,game.monk,game.berzerker,game.assasin,game.players);

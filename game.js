@@ -6,7 +6,7 @@ import Assasin from "./assasin.js";
 
 export default class Game{
    constructor(){
-     this.turnLeft=2;
+     this.turnLeft=10;
      this.fighter=new Fighter(name="grace");
      this.paladin=new Paladin(name="ulder");
      this.monk=new Monk(name="moana");
